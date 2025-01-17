@@ -6,35 +6,72 @@
     <title>Satish Pasumarthi - Resume</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .work-title {
+        body {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .work-title span {
-            font-weight: normal;
+        nav {
+            width: 10%;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            width: 90%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Satish Pasumarthi</h1>
-    <p>
-        <a href="https://www.linkedin.com/in/satishpasumarthi" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/satishpasumarthi" target="_blank">GitHub</a> |
-        <a href="mailto:satishkumar789@gmail.com">Email</a> |
-        <a href="tel:+19797392488">+1-979-739-2488</a>
-    </p>
-</header>
+<nav>
+    <ul>
+        <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#experience" onclick="showSection('experience')">Work Experience</a></li>
+        <li><a href="#research" onclick="showSection('research')">Research Experience</a></li>
+        <li><a href="#education" onclick="showSection('education')">Education</a></li>
+        <li><a href="#skills" onclick="showSection('skills')">Technical Skills</a></li>
+        <li><a href="#papers" onclick="showSection('papers')">Papers I Have Read</a></li>
+    </ul>
+</nav>
 
-<div class="container">
-    <section>
+<main>
+    <section id="about" class="section active">
+        <h2>About Me</h2>
+        <p>
+            I am a highly curious Machine Learning Engineer with over 6 years of software development experience and 3+ years of hands-on expertise in Machine and Deep Learning. With a Master's specialization in Deep Learning and NLP, I currently work at the intersection of systems, machine learning, and software to optimize and enhance the deep learning experience on the cloud. Proficient in TensorFlow and PyTorch, I focus on optimizing these frameworks for cloud environments, delivering scalable and efficient solutions.
+        </p>
+    </section>
+
+    <section id="experience" class="section">
         <h2>Work Experience</h2>
-        <h3 class="work-title">
-            <span>Amazon, Software Development Engineer</span>
-            <span>Cupertino, CA | Feb 2020 - Present</span>
-        </h3>
+        <h3>Amazon, Software Development Engineer</h3>
+        <p>Cupertino, CA | Feb 2020 - Present</p>
         <ul>
             <li>Founding member of AWS SageMaker Hyperpod slurm beta product, driving $100M+ revenue.</li>
             <li>Designed Kubernetes support for ML workloads on beta products.</li>
@@ -43,41 +80,30 @@
             <li>Supported Amazon's AGI team with scalable ML infrastructure for NVIDIA and AWS Trainium.</li>
             <li>Redesigned AWS SageMaker Training toolkit for enhanced log streaming and error logging.</li>
         </ul>
-
-        <h3 class="work-title">
-            <span>Synopsys, Staff R&D Engineer</span>
-            <span>Sunnyvale, CA | Sep 2019 - Feb 2020</span>
-        </h3>
+        <h3>Synopsys, Staff R&D Engineer</h3>
+        <p>Sunnyvale, CA | Sep 2019 - Feb 2020</p>
         <ul>
             <li>Integrated Redis database into ML product (dso.ai), reducing query time by 10x.</li>
             <li>Implemented BFS to optimize hierarchical data handling in MongoDB and file-based systems.</li>
         </ul>
-
-        <h3 class="work-title">
-            <span>Xilinx, Senior Software Engineer</span>
-            <span>Hyderabad, INDIA | Jun 2014 - Jul 2017</span>
-        </h3>
+        <h3>Xilinx, Senior Software Engineer</h3>
+        <p>Hyderabad, INDIA | Jun 2014 - Jul 2017</p>
         <ul>
             <li>Automated Physical Design Verification using PERL and PythonQt.</li>
             <li>Developed VIA placement utility, reducing man-hours by 500x on 7nm designs.</li>
         </ul>
-
-        <h3 class="work-title">
-            <span>Microchip, Software Engineer II</span>
-            <span>Hyderabad, INDIA | Jul 2011 - Jun 2014</span>
-        </h3>
+        <h3>Microchip, Software Engineer II</h3>
+        <p>Hyderabad, INDIA | Jul 2011 - Jun 2014</p>
         <ul>
             <li>Created a Signal Tracer tool for complex chip designs with over 1 billion transistors.</li>
             <li>Reduced man-hours by 20x with automated netlist integration.</li>
         </ul>
     </section>
 
-    <section>
+    <section id="research" class="section">
         <h2>Research Experience</h2>
-        <h3 class="work-title">
-            <span>Research Assistant, TAMU</span>
-            <span>College Station, TX | Jan 2018 - Aug 2019</span>
-        </h3>
+        <h3>Research Assistant, TAMU</h3>
+        <p>College Station, TX | Jan 2018 - Aug 2019</p>
         <ul>
             <li>Defended Master's thesis on Robust Word Predictions using Wikipedia and BBC datasets.</li>
             <li>Implemented structured Self-Attention for improved predictions.</li>
@@ -85,22 +111,17 @@
         </ul>
     </section>
 
-    <section>
+    <section id="education" class="section">
         <h2>Education</h2>
-        <h3 class="work-title">
-            <span>Texas A&M University</span>
-            <span>College Station, TX, USA | Aug 2017 – Aug 2019</span>
-        </h3>
+        <h3>Texas A&M University</h3>
+        <p>College Station, TX, USA | Aug 2017 – Aug 2019</p>
         <p>Master of Science in Computer Engineering (Thesis) | GPA: 4.00/4.00</p>
-
-        <h3 class="work-title">
-            <span>National Institute of Technology Warangal</span>
-            <span>Warangal, INDIA | Jul 2007 – May 2011</span>
-        </h3>
+        <h3>National Institute of Technology Warangal</h3>
+        <p>Warangal, INDIA | Jul 2007 – May 2011</p>
         <p>Bachelor of Technology in Electronics and Computer Engineering | GPA: 8.81/10.00</p>
     </section>
 
-    <section>
+    <section id="skills" class="section">
         <h2>Technical Skills</h2>
         <ul>
             <li><strong>Languages and OS:</strong> Python, C++, Perl, Bash, PythonQt, Linux, Ubuntu</li>
@@ -110,11 +131,25 @@
             <li><strong>ML Frameworks:</strong> PyTorch, TensorFlow</li>
         </ul>
     </section>
-</div>
 
-<footer>
-    &copy; 2025 Satish Pasumarthi. All rights reserved.
-</footer>
+    <section id="papers" class="section">
+        <h2>Papers I Have Read</h2>
+        <ul>
+            <li><a href="https://arxiv.org/abs/1605.08695" target="_blank">Attention Is All You Need</a> - Vaswani et al.</li>
+            <li><a href="https://arxiv.org/abs/1409.0473" target="_blank">Adam: A Method for Stochastic Optimization</a> - Kingma and Ba.</li>
+            <li><a href="https://arxiv.org/abs/1512.03385" target="_blank">Deep Residual Learning for Image Recognition</a> - He et al.</li>
+            <li><a href="https://arxiv.org/abs/1706.03762" target="_blank">Learning Transferable Features with Deep Adaptation Networks</a> - Long et al.</li>
+        </ul>
+    </section>
+</main>
+
+<script>
+    function showSection(id) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
