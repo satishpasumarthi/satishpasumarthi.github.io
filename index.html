@@ -4,65 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satish Pasumarthi - Resume</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+        .work-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        header {
-            background: #007acc;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        header p a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        header p a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #007acc;
-            border-bottom: 2px solid #007acc;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 0.9em;
+        .work-title span {
+            font-weight: normal;
         }
     </style>
 </head>
@@ -81,8 +31,10 @@
 <div class="container">
     <section>
         <h2>Work Experience</h2>
-        <h3>Amazon, Software Development Engineer</h3>
-        <p>Cupertino, CA | Feb 2020 - Present</p>
+        <h3 class="work-title">
+            <span>Amazon, Software Development Engineer</span>
+            <span>Cupertino, CA | Feb 2020 - Present</span>
+        </h3>
         <ul>
             <li>Founding member of AWS SageMaker Hyperpod slurm beta product, driving $100M+ revenue.</li>
             <li>Designed Kubernetes support for ML workloads on beta products.</li>
@@ -92,22 +44,28 @@
             <li>Redesigned AWS SageMaker Training toolkit for enhanced log streaming and error logging.</li>
         </ul>
 
-        <h3>Synopsys, Staff R&D Engineer</h3>
-        <p>Sunnyvale, CA | Sep 2019 - Feb 2020</p>
+        <h3 class="work-title">
+            <span>Synopsys, Staff R&D Engineer</span>
+            <span>Sunnyvale, CA | Sep 2019 - Feb 2020</span>
+        </h3>
         <ul>
             <li>Integrated Redis database into ML product (dso.ai), reducing query time by 10x.</li>
             <li>Implemented BFS to optimize hierarchical data handling in MongoDB and file-based systems.</li>
         </ul>
 
-        <h3>Xilinx, Senior Software Engineer</h3>
-        <p>Hyderabad, INDIA | Jun 2014 - Jul 2017</p>
+        <h3 class="work-title">
+            <span>Xilinx, Senior Software Engineer</span>
+            <span>Hyderabad, INDIA | Jun 2014 - Jul 2017</span>
+        </h3>
         <ul>
             <li>Automated Physical Design Verification using PERL and PythonQt.</li>
             <li>Developed VIA placement utility, reducing man-hours by 500x on 7nm designs.</li>
         </ul>
 
-        <h3>Microchip, Software Engineer II</h3>
-        <p>Hyderabad, INDIA | Jul 2011 - Jun 2014</p>
+        <h3 class="work-title">
+            <span>Microchip, Software Engineer II</span>
+            <span>Hyderabad, INDIA | Jul 2011 - Jun 2014</span>
+        </h3>
         <ul>
             <li>Created a Signal Tracer tool for complex chip designs with over 1 billion transistors.</li>
             <li>Reduced man-hours by 20x with automated netlist integration.</li>
@@ -116,8 +74,10 @@
 
     <section>
         <h2>Research Experience</h2>
-        <h3>Research Assistant, TAMU</h3>
-        <p>Information and Innovation Lab, College Station, TX | Jan 2018 - Aug 2019</p>
+        <h3 class="work-title">
+            <span>Research Assistant, TAMU</span>
+            <span>College Station, TX | Jan 2018 - Aug 2019</span>
+        </h3>
         <ul>
             <li>Defended Master's thesis on Robust Word Predictions using Wikipedia and BBC datasets.</li>
             <li>Implemented structured Self-Attention for improved predictions.</li>
@@ -127,15 +87,17 @@
 
     <section>
         <h2>Education</h2>
-        <h3>Texas A&M University</h3>
-        <p>College Station, TX, USA</p>
+        <h3 class="work-title">
+            <span>Texas A&M University</span>
+            <span>College Station, TX, USA | Aug 2017 – Aug 2019</span>
+        </h3>
         <p>Master of Science in Computer Engineering (Thesis) | GPA: 4.00/4.00</p>
-        <p>Aug 2017 – Aug 2019</p>
 
-        <h3>National Institute of Technology Warangal</h3>
-        <p>Warangal, INDIA</p>
+        <h3 class="work-title">
+            <span>National Institute of Technology Warangal</span>
+            <span>Warangal, INDIA | Jul 2007 – May 2011</span>
+        </h3>
         <p>Bachelor of Technology in Electronics and Computer Engineering | GPA: 8.81/10.00</p>
-        <p>Jul 2007 – May 2011</p>
     </section>
 
     <section>
